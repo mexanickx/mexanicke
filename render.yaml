@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: tiktok-saver-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: API_TOKEN
+        valueFrom:
+          # Токен будет задан вручную в настройках Render
+    plan: free
